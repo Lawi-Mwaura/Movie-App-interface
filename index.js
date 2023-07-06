@@ -89,5 +89,11 @@ async function loadMoreResults(){
 
 //Detect end of page and load more results
 function detectEnd(){
-    const{}
+    const {scrollTop, clientHeight, scrollHeight} = document.documentElement;
+    if(scrollTop + clientHeight >= scrollHeight - 20){
+        loadMoreResults();
+    }
 }
+
+//Handle 
+
