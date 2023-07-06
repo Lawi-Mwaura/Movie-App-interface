@@ -1,7 +1,7 @@
 //Stating my constants
 const apiKey = "b777522a168b4f933547e01643057b97";
 const imgApi = "https://image.tmdb.org/t/p/w1289";
-const searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=`;
+const searchUrl = `https://api.themoviedb.org/3/movie/550?api_key=b777522a168b4f933547e01643057b97`;
 
 const form = document.getElementById("search-form");
 const query = document.getElementById("search-input");
@@ -33,28 +33,28 @@ async function fetchAndShowResult(url){
 
 //Defining a function that creates the movie cards
 function createMovieCard(movie){
-    const { posterPath, originalTitle, releaseDate, Overview} = movie;
-    const imagePath = posterPath ? imgApi + posterPath : "./img-01.jpeg";
-    const trunctatedTitle = originalTitle.length > 15 ?
-    originalTitle.slice(0, 15) + "..." : originalTitle;
-    const formattedDate = releaseDate || "No release date";
+    const { poster_path, original_title, release_date, overview} = movie;
+    const imagePath = poster_path ? imgApi + poster_path : "./img-01.jpeg";
+    const trunctatedTitle = original_title.length > 15 ?
+    original_title.slice(0, 15) + "..." : original_title;
+    const formattedDate = release_date || "No release date";
 
     const cardTemplate = `
     <div class="column">
     <div class="card">
     <a class="card-media" href="./img-01.jpeg">
-    <img src="${imagePath}" alt="${originalTitle}"
+    <img src="${imagePath}" alt="${original_title}"
     width="100%"/>
     </a>
     <div class="card-content">
     <div class="card-header">
     <div class="left-content">
-    <h3 style="font-weight: 600">${truncatedTitle}</h3>
+    <h3 style="font-weight: 600">${trunctatedTitle}</h3>
     <span style="color: #12efec">${formattedDate}</span>
     </div>
     <div class="right-content">
     <a href="${imagePath}" target="_blank"
-    class="card-btn"> See Cover</a>
+    class="card-btn"> See Cover </a>
     </div>
     </div>
     <div class="info">${overview || "No overview yet..."}
@@ -70,7 +70,7 @@ function clearResult(){
     result.innerHTML = "";
 }
 
-//Display results in pae
+//Display results on the page
  function showResults(item){
     const newContent = item.map(createMovieCard).join("");
     result.innerHTML = newContent || "<p>No results found.</p>";
@@ -121,8 +121,8 @@ async function init(){
     await fetchAndShowResult(url);
 }
 
+init();// Initailizes the page
 
-}
 
 
 
