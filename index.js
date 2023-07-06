@@ -99,7 +99,7 @@ async function handleSearch(event){
       const searchTerm = query.value.trim();
       if(searchTerm){
         isSearching = true;
-        clearResults();
+        clearResult();
         const newUrl = `${searchUrl}${searchTerm}&page=${page}`;
         await fetchAndShowResult(newUrl);
         query.value = "";
