@@ -108,3 +108,9 @@ async function handleSearch(event){
       }
 }
 
+// Adding Event listeners
+form.addEventListener('submit', handleSearch);
+window.addEventListener('scroll', detectEnd);
+window.addEventListener('resize', detectEnd);
+
+
