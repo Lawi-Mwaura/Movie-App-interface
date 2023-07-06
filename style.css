@@ -139,3 +139,13 @@ body{
     flex-wrap: wrap;
     justify-content: center;
 }
+
+@media screen and (max-width:550px) {
+    .search-box{
+        justify-content: center;
+    }
+
+    .search-box form{
+        margin-top: 10px;
+    }
+}

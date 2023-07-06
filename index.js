@@ -2,11 +2,9 @@
 const apiKey = "b777522a168b4f933547e01643057b97";
 const imgApi = "https://image.tmdb.org/t/p/w500";
 const searchUrl = `https://api.themoviedb.org/3/movie/550?api_key=b777522a168b4f933547e01643057b97`;
-
 const form = document.getElementById("search-form");
 const query = document.getElementById("search-input");
 const result = document.getElementById("result");
-
 const page = 1;
 let isSearching = false;
 
@@ -71,7 +69,7 @@ function clearResult(){
 //Display results on the page
  function showResults(item){
     const newContent = item.map(createMovieCard).join("");
-    result.innerHTML = newContent || "<p>No results found.</p>";
+    result.innerHTML += newContent || "<p>No results found.</p>";
 }
 
 //Load more results
@@ -94,8 +92,8 @@ function detectEnd(){
 }
 
 //Handle the Search functionality
-async function handleSearch(event){
-      event.preventDefault();
+async function handleSearch(e){
+      e.preventDefault();
       const searchTerm = query.value.trim();
       if(searchTerm){
         isSearching = true;
