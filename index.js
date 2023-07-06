@@ -82,7 +82,7 @@ async function loadMoreResults(){
         return;
     }
     page++;
-    const searchTerm = query.ariaValueMax;
+    const searchTerm = query.value;
     const url = searchTerm ? `${searchUrl}${searchTerm}&page=${page}`: `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${apiKey}&page=${page}`;
     await fetchAndShowResult (url);
 }
@@ -95,5 +95,16 @@ function detectEnd(){
     }
 }
 
-//Handle 
+//Handle the Search functionality
+async function handleSearch(event){
+      event.preventDefault();
+      const searchTerm = query.value.trim();
+      if(searchTerm){
+        isSearching = true;
+        clearResults();
+        const newUrl = `${searchUrl}${searchTerm}&page=${page}`;
+        await fetchAndShowResult(newUrl);
+        query.value = "";
+      }
+}
 
