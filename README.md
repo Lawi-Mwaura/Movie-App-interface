@@ -32,7 +32,7 @@ For this movie interface app HTML, CSS, JS and an API used.
 
 
 # Deployment to Netlify
-
+The live url to the movie interface is: **your-rightsock-37ca63.netlify.app**
 
 # API documentation
 
