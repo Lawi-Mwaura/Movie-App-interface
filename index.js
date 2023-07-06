@@ -1,6 +1,6 @@
 //Stating my constants
 const apiKey = "b777522a168b4f933547e01643057b97";
-const imgApi = "https://image.tmdb.org/t/p/w500/1E5baAaEse26fej7uHcjOgEE2t2.jpg";
+const imgApi = "https://image.tmdb.org/t/p/w500";
 const searchUrl = `https://api.themoviedb.org/3/movie/550?api_key=b777522a168b4f933547e01643057b97`;
 
 const form = document.getElementById("search-form");
