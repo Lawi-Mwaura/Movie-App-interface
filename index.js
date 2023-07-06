@@ -113,4 +113,17 @@ form.addEventListener('submit', handleSearch);
 window.addEventListener('scroll', detectEnd);
 window.addEventListener('resize', detectEnd);
 
+//Initializing the page
+async function init(){
+    clearResult();
+    const url =`https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${apiKey}&page=$(page)`;
+    isSearching = false;
+    await fetchAndShowResult(url);
+}
+
+
+}
+
+
+
 
