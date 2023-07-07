@@ -10,7 +10,7 @@ Since this web app is bound to expand, more functionality will be added for inst
 # Table of contents
 1. User stories
 
-2. Tech-stack HTML, CSS, JS, Bootstrap, Node, Material User Design and API used
+2. Tech-stack HTML, CSS, JS, Node, and API used
 
 3. Installation and configuration instruction json server
 
