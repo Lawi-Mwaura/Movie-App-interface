@@ -6,18 +6,20 @@
     font-family: 'Roboto';
     box-sizing: border-box;
 }
-
+/*Stylings for the link*/
 a{
     color: #fff;
     text-decoration: none;
 }
 
+/*Background color for the body*/
 body{
     color:#fff;
     background-color: #212121;
     padding: 1.5rem;
 }
 
+/*Stylings for the search-box*/
 .search-box{
     width: 100%;
     display: flex;
@@ -42,6 +44,7 @@ body{
     background-color: rgba(255, 255, 255, 0.9);
 }
 
+/*Stylings for the search-box and search-btn*/
 .search-box .search-btn{
     width: 120px;
     background-color: #01579b;
@@ -125,12 +128,13 @@ body{
     border-color: #0091ea;
 }
 
+/*Styling for the animation for movie card*/
 .container .card:hover .info{
     max-height: 200px;
     opacity: 1;
     padding: 8px 0;
 }
-
+/*Styling for the result*/
 #result{
     display: flex;
     max-width: 1200px;
@@ -140,6 +144,7 @@ body{
     justify-content: center;
 }
 
+/*For mobile screens*/
 @media screen and (max-width:550px) {
     .search-box{
         justify-content: center;
