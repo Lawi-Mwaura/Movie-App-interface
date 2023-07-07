@@ -1,4 +1,4 @@
-                 # Movie-App-interface
+                                                # Movie-App-interface
 
 # Table of contents
 1. User stories
@@ -16,26 +16,32 @@
 # User stories
 As a movie enthusiast, I want to use a movie interface to explore and discover new movies, as well as access information and details about my favorite movies. This user story can be broken down into several tasks and actions:
 
-Browsing Movies: As a user, I want to browse a collection of movies, either by genre, popularity, or release date. I should be able to view a list of movie posters or titles to select from.
+Browsing Movies (coming soon): As a user, I want to browse a collection of movies, either by genre, popularity, or release date. I should be able to view a list of movie posters or titles to select from.
 
 Viewing Movie Details: Once I select a movie, I want to view its details, such as the title, release date, genres, overview, and rating. This should provide me with a comprehensive overview of the movie.
-
-Watching Trailers: I want the ability to watch trailers for movies to get a better sense of their content and style. This feature should provide a seamless integration with a video player or streaming platform.
 
 Searching for Movies: I should be able to search for specific movies by title or keywords. The search functionality should provide relevant results and allow me to quickly find movies of interest.
 
 # Tech-stack
-For this movie interface app HTML, CSS, JS and an API used.
+For this movie interface app uses a single HTML file, CSS file, JS file, some node modules and an API key. Furthermore a db.json file was generated from the API key using an online JSON prettifier. 
 
 # Installation and configuration for operating the Json-server
+All lab node dependencies should be installed by logging in to developer.themoviedb.org/getting started
 
+Once you have created an account, you can pick a language for instance node and run npm install node-fetch@2 --save
+
+This will install all the dependencies including all node modules
 
 
 # Deployment to Netlify
 The live url to the movie interface is: **your-rightsock-37ca63.netlify.app**
 
 # API documentation
-
+The API Key is accessed by:
+1. Creating an account on the moviedb.org
+2. Requesting an API key and authentication token
+3. After filling out the form an API key will be granted depending on your terms of usage
+4. Success, you have an API key ready for use!
 
 # Ownership
 Author: Lawi Mwaura
