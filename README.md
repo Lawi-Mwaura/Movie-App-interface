@@ -1,5 +1,12 @@
                                                 # Movie-App-interface
 
+# Project Description
+This web application uses an external API to display movies based on the website: themoviedb.org
+
+It makes use of a db.json which acts as a server for interactivity such as movie descriptions, movie posters, movie release date, movie title, movie cover and a search option.
+
+Since this web app is bound to expand, more functionality will be added for instance, watching trailers, sorting the latest movie, movie generation according to user preferences and much more...
+
 # Table of contents
 1. User stories
 
