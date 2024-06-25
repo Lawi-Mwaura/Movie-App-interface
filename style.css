@@ -1,26 +1,27 @@
-/*Importing Roboto Medium font*/
+/* Importing Roboto Medium font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-*{
+* {
     margin: 0;
     outline: none;
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
-/*Stylings for the link*/
-a{
+
+/* Stylings for the link */
+a {
     color: #fff;
     text-decoration: none;
 }
 
-/*Background color for the body*/
-body{
-    color:#fff;
+/* Background color for the body */
+body {
+    color: #fff;
     background-color: #212121;
     padding: 1.5rem;
 }
 
-/*Stylings for the search-box*/
-.search-box{
+/* Stylings for the search-box */
+.search-box {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -30,22 +31,22 @@ body{
     margin: 15px 0 30px 0;
 }
 
-.search-box form{
+.search-box form {
     display: flex;
     max-width: 400px;
 }
 
-.search-box input{
+.search-box input {
     width: 100%;
     max-width: 400px;
     padding: 8px;
-    border-radius: 0.4rem 0 0 0;
+    border-radius: 0.4rem 0 0 0.4rem;
     border: none;
     background-color: rgba(255, 255, 255, 0.9);
 }
 
-/*Stylings for the search-box and search-btn*/
-.search-box .search-btn{
+/* Stylings for the search-box and search-btn */
+.search-box .search-btn {
     width: 120px;
     background-color: #01579b;
     color: #fff;
@@ -56,32 +57,48 @@ body{
     transition: all 0.6s ease-in-out;
 }
 
-.search-box .search-btn:hover{
+.search-box .search-btn:hover {
     background-color: #0091ea;
     border: 1px solid #fff;
 }
 
-.container{
+.container {
     width: 100%;
-    max-width: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
 }
 
-.container .card{
+#result {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.card {
+    background: #333;
     position: relative;
     font-size: 14px;
     border: 1px solid rgba(255, 255, 255, 0.7);
     border-radius: 0.4rem;
     line-height: 20px;
-    width: 285px;
+    width: 100%;
+    max-width: 285px;
     height: 360px;
     overflow: hidden;
     transition: all 0.5s ease;
 }
 
-.container .card .card-content{
+.card .card-media img {
+    width: 100%;
+    height: auto;
+}
+
+.card .card-content {
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -91,23 +108,23 @@ body{
     transition: all 0.5s ease;
 }
 
-.container .card .card-content .card-header{
+.card .card-content .card-header {
     padding: 8px 0;
     display: flex;
     align-items: center;
-    justify-self: space-between;
+    justify-content: space-between;
 }
 
-.container .card .card-content .card-btn{
+.card .card-content .card-btn {
     color: #fff;
     cursor: pointer;
     padding: 6px 8px;
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 0.4rem;
-    transition:all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
-.container .card .card-content .info{
+.card .card-content .info {
     max-height: 0;
     opacity: 0;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
@@ -115,42 +132,33 @@ body{
     transition: all 0.5s ease;
 }
 
-.container .card:hover{
+.card:hover {
     cursor: pointer;
 }
 
-.container .card:hover .card-content{
-    background-image: linear-gradient(180deg, rgba (51, 55, 69, 0), #101528 48%);
+.card:hover .card-content {
+    background-image: linear-gradient(180deg, rgba(51, 55, 69, 0), #101528 48%);
 }
 
-.container .card:hover .card-btn{
+.card:hover .card-btn {
     background-color: #0091ea;
     border-color: #0091ea;
 }
 
-/*Styling for the animation for movie card*/
-.container .card:hover .info{
+/* Styling for the animation for movie card */
+.card:hover .info {
     max-height: 200px;
     opacity: 1;
     padding: 8px 0;
 }
-/*Styling for the result*/
-#result{
-    display: flex;
-    max-width: 1200px;
-    gap: 15px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
 
-/*For mobile screens*/
-@media screen and (max-width:550px) {
-    .search-box{
+/* For mobile screens */
+@media screen and (max-width: 550px) {
+    .search-box {
         justify-content: center;
     }
 
-    .search-box form{
+    .search-box form {
         margin-top: 10px;
     }
 }
